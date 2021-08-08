@@ -20,7 +20,7 @@ const campgroundRoutes = require("./routes/campgrounds");
 const reviewRoutes = require("./routes/reviews");
 
 const MongoDBStore = require("connect-mongo")(session);
-const dbUrl = "process.env.DB_URL";
+const dbUrl = process.env.DB_URL;
 
 mongoose.connect(dbUrl, {
   useNewUrlParser: true,
